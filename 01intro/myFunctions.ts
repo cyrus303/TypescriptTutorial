@@ -23,5 +23,4 @@ loginUser('s', 's@s.com');
 
 function consoleError(errMsg: string): void {
   console.log(errMsg);
-  return errMsg;
 }
