@@ -4,7 +4,7 @@ const user = {
   isActive: true,
 };
 
-function createUser({name: string, isPaid: boolean}) {}
+function createUser({name: string, isPaid: number}) {}
 
 let newUser = {
   name: 'sachin',
@@ -14,16 +14,23 @@ let newUser = {
 
 createUser(newUser);
 
-function createCourse(): {name: string; price: number} {
+function createCourse(): {name: string; price: boolean} {
   return {name: 'madhu', price: 500};
 }
 
 function checkout({
-  name: string,
-  price: number,
-  email: string,
-  isPaid: boolean,
-}) {}
+  name,
+  price,
+  email,
+  isPaid,
+}: {
+  name: string;
+  price: number;
+  email: string;
+  isPaid: boolean;
+}): void {
+  // Function body
+}
 
 checkout({
   name: 'sachin',
