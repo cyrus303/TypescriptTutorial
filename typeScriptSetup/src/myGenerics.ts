@@ -31,3 +31,40 @@ function lessData(val: number): number {
 const moreData = <T>(val: T[]): T => {
   return val[3];
 };
+
+interface dataBase {
+  id: number;
+  row: number;
+  value: string;
+}
+
+function multiplePara<T, U extends dataBase>(
+  valOne: T,
+  valTwo: U
+): object {
+  return {
+    valOne,
+    valTwo,
+  };
+}
+
+multiplePara(2, {id: 123, row: 1, value: 'sachin'});
+
+interface Quiz {
+  name: string;
+  type: string;
+}
+
+interface Course {
+  name: string;
+  author: string;
+  subject: string;
+}
+
+class Sellable<T> {
+  public cart: T[] = [];
+
+  addToCart(product: T) {
+    this.cart.push(product);
+  }
+}

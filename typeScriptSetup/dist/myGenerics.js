@@ -24,3 +24,18 @@ function lessData(val) {
 const moreData = (val) => {
     return val[3];
 };
+function multiplePara(valOne, valTwo) {
+    return {
+        valOne,
+        valTwo,
+    };
+}
+multiplePara(2, { id: 123, row: 1, value: 'sachin' });
+class Sellable {
+    constructor() {
+        this.cart = [];
+    }
+    addToCart(product) {
+        this.cart.push(product);
+    }
+}
